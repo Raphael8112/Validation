@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>validation using api</title>
+</head>
+<body>
+<input id="demo" type="number" min="100" max="300" required>
+<button onclick="myfunction()">Enter</button>
+<p id="result"></p>
+<script>
+    function myfunction(){
+        var y= document.getElementById("demo");
+        if(!y.checkValidity()){
+            document.getElementById("result").innerHTML = y.validationMessage;
+        } else{
+            document.getElementById("result").innerHTML ="input is okay"
+        }
+    }
+</script>
+</body>
+</html>
